@@ -32,8 +32,8 @@ Antes de começar, você vai precisar ter instalado:
 Clone o projeto:
 
 ```bash
-git clone https://github.com/seuusuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/seuusuario/Aplica-o-Monitorada.git
+cd Aplica-o-Monitorada
 ```
 
 Suba os serviços com Docker:
