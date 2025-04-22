@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  app:
+    build: ./app
+    ports:
+      - "5000:5000"
+    networks:
+      - monitoramento
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - monitoramento
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - monitoramento
+    depends_on:
+      - prometheus
+    environment:
+      - GF_SMTP_ENABLED=true
+      - GF_SMTP_HOST=smtp.gmail.com:587
+      - GF_SMTP_USER=######################
+      - GF_SMTP_PASSWORD=#############
+      - GF_SMTP_FROM_ADDRESS=###############
+      - GF_SMTP_FROM_NAME=Grafana Alerts
+
+networks:
+  monitoramento:
+    driver: bridge
