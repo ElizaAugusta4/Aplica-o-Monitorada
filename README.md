@@ -1,37 +1,59 @@
 # Projeto Prático de Monitoramento 🛠️
 
-Repositório com projeto prático para aprender e aplicar conceitos de **Site Reliability Engineering (SRE)**.
+Este repositório contém um projeto prático com foco na aplicação de conceitos de **Site Reliability Engineering (SRE)**, utilizando ferramentas modernas de monitoramento como **Prometheus** e **Grafana**.
 
-## Objetivos 🎯
+## 📌 Descrição
 
-- Implementar monitoramento com Prometheus/Grafana.
-- Automatizar infraestrutura com Terraform.
-- Garantir resiliência via Chaos Engineering.
-- Definir SLOs/SLIs e gerenciar incidentes.
+O objetivo principal deste projeto é fornecer uma base sólida para compreender e implementar um sistema de monitoramento eficaz, acompanhando métricas de aplicações em tempo real e promovendo maior confiabilidade e observabilidade nos sistemas.
 
-## Estrutura do Projeto 📂
+## 🎯 Objetivos
 
-aplica-o-monitorada/
-├── monitoring/ # Configs de monitoramento e alertas
-├── iac/ # Infraestrutura como código (Terraform)
-├── cicd/ # Pipelines CI/CD
-├── chaos-engineering/ # Testes de caos e carga
-├── post-mortems/ # Análises de incidentes
-└── docs/ # Documentação adicional
+- Configurar e integrar Prometheus e Grafana.
+- Coletar métricas de aplicações Python.
+- Visualizar dados em tempo real com dashboards customizados.
+- Criar alertas com base em eventos e condições específicas.
 
+## ⚙️ Tecnologias Utilizadas
 
-## Pré-requisitos 📋
-- Git
-- Docker
-- Terraform
-- Kubernetes (Minikube ou cluster gerenciado)
+- [Docker](https://www.docker.com/)
+- [Prometheus](https://prometheus.io/)
+- [Grafana](https://grafana.com/)
+- [Python](https://www.python.org/) (exemplo de aplicação monitorada)
 
-## Como Contribuir 💡
-1. Faça um fork do projeto.
-2. Crie uma branch: `git checkout -b minha-feature`.
-3. Commit suas mudanças: `git commit -m 'Adicionei X'`.
-4. Push para a branch: `git push origin minha-feature`.
-5. Abra um Pull Request.
+## 📋 Pré-requisitos
 
-## Licença 📄
-MIT License. Veja [LICENSE](LICENSE) para detalhes.
+Antes de começar, você vai precisar ter instalado:
+
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/)
+
+## 🚀 Como executar
+
+Clone o projeto:
+
+```bash
+git clone https://github.com/seuusuario/nome-do-repositorio.git
+cd nome-do-repositorio
+```
+
+Suba os serviços com Docker:
+
+```bash
+docker-compose up -d
+```
+
+Acesse o Grafana em: [http://localhost:3000](http://localhost:3000)
+
+## 📈 Dashboards e Monitoramento
+
+O dashboard principal inclui:
+
+- Quantidade de requisições por status HTTP
+- Tempo de resposta por endpoint
+- Total de erros registrados
+- Alertas configuráveis
+
+## 🛡️ Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
